@@ -717,6 +717,7 @@
 <span class="sd">        out</span>
 <span class="sd">            optional output array, for writing the result to. It must have a shape that</span>
 <span class="sd">            the inputs broadcast to.</span>
+
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">        ret</span>
@@ -727,10 +728,12 @@
 <span class="sd">        Examples</span>
 <span class="sd">        --------</span>
 <span class="sd">        With :class:`ivy.Array` input:</span>
+
 <span class="sd">        &gt;&gt;&gt; x = ivy.array([1., 0., 2.,])</span>
 <span class="sd">        &gt;&gt;&gt; y = x.cos()</span>
 <span class="sd">        &gt;&gt;&gt; print(y)</span>
 <span class="sd">        ivy.array([0.54, 1., -0.416])</span>
+<span class="sd">        </span>
 <span class="sd">        &gt;&gt;&gt; x = ivy.array([-3., 0., 3.])</span>
 <span class="sd">        &gt;&gt;&gt; y = ivy.zeros(3)</span>
 <span class="sd">        &gt;&gt;&gt; ivy.cos(x, out=y)</span>
