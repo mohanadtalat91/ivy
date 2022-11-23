@@ -2,12 +2,6 @@ isreal
 ======
 
 .. autofunction:: ivy.functional.ivy.elementwise.isreal
-
-.. autofunction:: ivy.array.array_methods.isreal
-
-.. autofunction:: ivy.container.container_methods.static_isreal
-
-.. autofunction:: ivy.container.container_methods.isreal
 |
 | **Supported Frameworks:**
 
@@ -27,15 +21,3 @@ isreal
 
 .. |numpy_logo| image:: ../../../logos/supported/numpy_logo.png
    :target: https://numpy.org
-
-
-.. toctree::
-   :hidden:
-   :maxdepth: -1
-   :caption: isreal
-
-   isreal/isreal_functional.rst
-   isreal/isreal_array.rst
-   isreal/isreal_container.rst
-   isreal/static_isreal_container.rst
-
