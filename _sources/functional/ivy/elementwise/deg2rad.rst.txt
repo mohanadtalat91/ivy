@@ -2,6 +2,12 @@ deg2rad
 =======
 
 .. autofunction:: ivy.functional.ivy.elementwise.deg2rad
+
+.. autofunction:: ivy.array.array_methods.deg2rad
+
+.. autofunction:: ivy.container.container_methods.static_deg2rad
+
+.. autofunction:: ivy.container.container_methods.deg2rad
 |
 | **Supported Frameworks:**
 
@@ -21,3 +27,15 @@ deg2rad
 
 .. |numpy_logo| image:: ../../../logos/supported/numpy_logo.png
    :target: https://numpy.org
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: deg2rad
+
+   deg2rad/deg2rad_functional.rst
+   deg2rad/deg2rad_array.rst
+   deg2rad/deg2rad_container.rst
+   deg2rad/static_deg2rad_container.rst
+

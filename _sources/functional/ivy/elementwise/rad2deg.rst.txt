@@ -2,6 +2,12 @@ rad2deg
 =======
 
 .. autofunction:: ivy.functional.ivy.elementwise.rad2deg
+
+.. autofunction:: ivy.array.array_methods.rad2deg
+
+.. autofunction:: ivy.container.container_methods.rad2deg
+
+.. autofunction:: ivy.container.container_methods.static_rad2deg
 |
 | **Supported Frameworks:**
 
@@ -21,3 +27,15 @@ rad2deg
 
 .. |numpy_logo| image:: ../../../logos/supported/numpy_logo.png
    :target: https://numpy.org
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: rad2deg
+
+   rad2deg/rad2deg_functional.rst
+   rad2deg/rad2deg_array.rst
+   rad2deg/rad2deg_container.rst
+   rad2deg/static_rad2deg_container.rst
+
