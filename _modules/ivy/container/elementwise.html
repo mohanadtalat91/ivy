@@ -1619,7 +1619,7 @@
 
 <div class="viewcode-block" id="ContainerWithElementwise.static_bitwise_invert"><a class="viewcode-back" href="../../../data_classes/container/elementwise/ContainerWithElementwise.html#ivy.container.elementwise.ContainerWithElementwise.static_bitwise_invert">[docs]</a>    <span class="nd">@staticmethod</span>
     <span class="k">def</span> <span class="nf">static_bitwise_invert</span><span class="p">(</span>
-        <span class="n">x</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">ivy</span><span class="o">.</span><span class="n">Container</span><span class="p">,</span> <span class="n">ivy</span><span class="o">.</span><span class="n">Array</span><span class="p">,</span> <span class="n">ivy</span><span class="o">.</span><span class="n">NativeArray</span><span class="p">],</span>        
+        <span class="n">x</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">ivy</span><span class="o">.</span><span class="n">Container</span><span class="p">,</span> <span class="n">ivy</span><span class="o">.</span><span class="n">Array</span><span class="p">,</span> <span class="n">ivy</span><span class="o">.</span><span class="n">NativeArray</span><span class="p">],</span>
         <span class="o">/</span><span class="p">,</span>
         <span class="o">*</span><span class="p">,</span>
         <span class="n">key_chains</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
@@ -4648,14 +4648,14 @@
 <span class="sd">        Using :code:`ivy.Container` input:</span>
 
 <span class="sd">        &gt;&gt;&gt; x = ivy.Container(a=ivy.array([0.0, float(&#39;nan&#39;)]),\</span>
-<span class="sd">                              b=ivy.array([-0., -4, float(&#39;+inf&#39;)]),\</span>
+<span class="sd">                              b=ivy.array([-0.0, -4., float(&#39;+inf&#39;)]),\</span>
 <span class="sd">                              c=ivy.array([4., 4.4, 1.]))</span>
 <span class="sd">        &gt;&gt;&gt; y = ivy.Container.static_log2(x)</span>
 <span class="sd">        &gt;&gt;&gt; print(y)</span>
 <span class="sd">        {</span>
 <span class="sd">            a: ivy.array([-inf, nan]),</span>
 <span class="sd">            b: ivy.array([-inf, nan, inf]),</span>
-<span class="sd">            c: ivy.array([2., 2.1375, 0.])</span>
+<span class="sd">            c: ivy.array([2., 2.138, 0.])</span>
 <span class="sd">        }</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="n">ContainerBase</span><span class="o">.</span><span class="n">cont_multi_map_in_static_method</span><span class="p">(</span>
@@ -4712,14 +4712,14 @@
 <span class="sd">        --------</span>
 <span class="sd">        Using :code:`ivy.Container` instance method:</span>
 <span class="sd">        &gt;&gt;&gt; x = ivy.Container(a=ivy.array([0.0, float(&#39;nan&#39;)]), \</span>
-<span class="sd">                              b=ivy.array([-0., -3.9, float(&#39;+inf&#39;)]), \</span>
-<span class="sd">                              c=ivy.array([9.8, 1.1, 1.]))</span>
+<span class="sd">                              b=ivy.array([-0.0, -3.9, float(&#39;+inf&#39;)]), \</span>
+<span class="sd">                              c=ivy.array([3.3, 1.1, 1.]))</span>
 <span class="sd">        &gt;&gt;&gt; y = x.log2(x)</span>
 <span class="sd">        &gt;&gt;&gt; print(y)</span>
 <span class="sd">        {</span>
 <span class="sd">            a: ivy.array([-inf, nan]),</span>
 <span class="sd">            b: ivy.array([-inf, nan, inf]),</span>
-<span class="sd">            c: ivy.array([3.293, 0.1375, 0.])</span>
+<span class="sd">            c: ivy.array([1.722, 0.138, 0.])</span>
 <span class="sd">        }</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">static_log2</span><span class="p">(</span>
